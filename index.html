@@ -1,51 +1,130 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Potter Quiz</title>
-     <link rel="stylesheet" href="styles.css">
-    <script src="style.js" defer></script>
-    
-   
+       <link rel="stylesheet" href="style3.css">
+    <script src="java3.js" defer></script>
+    <title>Hidden Quiz Flow</title>
+  
+
+
+
 </head>
+
 <body>
     <div class="container">
-        <h1>🎯 Knowledge Quiz</h1>
-        
-        <div id="quizSection">
-            <div class="quiz-header">
-                <div class="progress">
-                    Question <span id="currentQ">1</span> of <span id="totalQ">5</span>
+        <header id="pageTitle">Harry Potter Quiz App</header>
+
+        <!-- Home Page -->
+        <div id="homePage" class="page active">
+            <div class="quiz-card">
+                <span class="bookmark-icon" onclick="toggleBookmark(this)">🔖</span>
+                <div class="question">Question?</div>
+                <div class="answer">What is the name of the school that Harry Potter attends?</div>
+                <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                <div class="answer-content">Hogwarts School of Witchcraft and Wizardry.</div>
+                <div class="tags">
+                    <span class="tag">Harry Potter</span>
+                    <span class="tag">Hogwarts</span>
+                    <span class="tag">Fiction</span>
                 </div>
-                <button class="bookmark-btn" id="bookmarkBtn" onclick="toggleBookmark()">☆</button>
             </div>
 
-            <div class="question-card">
-                <div class="question" id="question"></div>
-                <div class="options" id="options"></div>
+            <div class="quiz-card">
+                <span class="bookmark-icon active" onclick="toggleBookmark(this)">🔖</span>
+                <div class="question">Question?</div>
+                <div class="answer">Who is Harry Potter's best friend throughout the series?</div>
+                <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                <div class="answer-content">Ron Weasley</div>
+                <div class="tags">
+                    <span class="tag">Gryffindor</span>
+                    <span class="tag">Characthers</span>
+                    <span class="tag">Friends</span>
+                </div>
             </div>
 
-            <div class="controls">
-                <button class="btn btn-secondary" id="prevBtn" onclick="prevQuestion()">Previous</button>
-                <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next</button>
-                <button class="btn btn-primary hidden" id="submitBtn" onclick="submitQuiz()">Submit Quiz</button>
+            <div class="quiz-card">
+                <span class="bookmark-icon" onclick="toggleBookmark(this)">🔖</span>
+                <div class="question">Question?</div>
+                <div class="answer">What is the name of the lightning bolt-shaped scar on Harry Potter's forehead?</div>
+                <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+                <div class="answer-content">The Dark Mark</div>
+                <div class="tags">
+                    <span class="tag">Harry Potter</span>
+                    <span class="tag">Symbolism</span>
+                    <span class="tag">Scar</span>
+                </div>
             </div>
         </div>
 
-        <div id="resultsSection" class="hidden results">
-            <h2>🎉 Quiz Complete!</h2>
-            <div class="score" id="scoreDisplay"></div>
-            <p id="resultMessage"></p>
-            
-            <div class="bookmarked-list" id="bookmarkedSection" style="display: none;">
-                <h3>📌 Bookmarked Questions</h3>
-                <div id="bookmarkedQuestions"></div>
+        <div class="quiz-card">
+            <span class="bookmark-icon" onclick="toggleBookmark(this)">🔖</span>
+            <div class="question">Question?</div>
+            <div class="answer">Which magical creature guards the entrance to the Gryffindor common room??</div>
+            <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
+            <div class="answer-content">The Fat Lady</div>
+            <div class="tags">
+                <span class="tag">Harry Potter</span>
+                <span class="tag">Creatures</span>
+                <span class="tag">Gryffindor</span>
             </div>
+        </div>
+        </div>
+   
 
-            <button class="btn btn-primary" onclick="restartQuiz()" style="margin-top: 30px;">Restart Quiz</button>
+        
+
+
+        <!-- Bookmarks Page -->
+        <div id="bookmarksPage" class="page">
+            <div id="bookmarkedQuestions"></div>
+        </div>
+
+        <!-- Profile Page -->
+        <div id="profilePage" class="page">
+            <div class="profile-section">
+                <div class="profile-header">
+                    <div class="profile-pic">👤</div>
+                    <div class="profile-name">Max Doe</div>
+                </div>
+
+                <div class="about-section">
+                    <h3>About me</h3>
+                    <textarea class="about-text"
+                        placeholder="Tell us about yourself...">Quiz enthusiast and lifelong learner!</textarea>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <span>🎓</span>
+                        <span>12</span>
+                    </div>
+                    <div class="stat-box">
+                        <span>💬</span>
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="settings">
+                    <h3>Settings</h3>
+                    <div class="toggle-container">
+                        <span>Dark Mode</span>
+                        <div class="toggle" onclick="toggleDarkMode(this)">
+                            <div class="toggle-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-        
+    <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="showPage('home')">🏠</button>
+        <button class="nav-btn" onclick="showPage('bookmarks')">🔖</button>
+        <button class="nav-btn" onclick="showPage('profile')">👤</button>
+    </nav>
+
+    </body>
+    </html>
