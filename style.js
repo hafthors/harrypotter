@@ -1,21 +1,22 @@
  const quizData = [
             {
-                question: "What is the capital of France?",
-                options: ["London", "Berlin", "Paris", "Madrid"],
+                question: "What is the name of the school that Harry Potter attends?",
+                options: ["Harry Potter", "Hogwarts", "Fiction", "Snake"],
                 correct: 2
             },
             {
-                question: "Which planet is known as the Red Planet?",
-                options: ["Venus", "Mars", "Jupiter", "Saturn"],
+                question: " What is the name of the lightning bolt-shaped scar on Harry Potter's forehead?",
+                options: ["Harry Potter", "Symbolism", "Scar", "Hogwarts"],
                 correct: 1
             },
             {
-                question: "What is the largest ocean on Earth?",
-                options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+                question: "Which magical creature guards the entrance to the Gryffindor common room?",
+                options: ["Harry Potter", "Creatures", "Gryffindor", "Scar"],
                 correct: 3
             },
+
             {
-                question: "Who painted the Mona Lisa?",
+                question: "What is the name of the three-headed dog that guards the Sorcerer's Stone?",
                 options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Michelangelo"],
                 correct: 1
             },
