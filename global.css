@@ -1,1 +1,6 @@
-x
+@import "global.css";
+@import "./components/header.css";
+@import "./components/card.css";
+@import "./components/navigation.css";
+@import "./components/button.css";
+@import "./components/profile.css";
