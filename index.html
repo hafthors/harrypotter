@@ -20,7 +20,7 @@
         <!-- Home Page -->
         <div id="homePage" class="page active">
             <div class="quiz-card">
-                <span class="bookmark-icon" onclick="toggleBookmark"></span>
+                <span class="bookmark-icon" onclick="toggleBookmark(this)">🔖</span>
                 <div class="question">Question?</div>
                 <div class="answer">What is the name of the school that Harry Potter attends?</div>
                 <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
@@ -33,7 +33,7 @@
             </div>
 
             <div class="quiz-card">
-                <span class="bookmark-icon active" onclick="toggleBookmark</span>
+                <span class="bookmark-icon active" onclick="toggleBookmark(this)">🔖</span>
                 <div class="question">Question?</div>
                 <div class="answer">Who is Harry Potter's best friend throughout the series?</div>
                 <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
@@ -46,7 +46,7 @@
             </div>
 
             <div class="quiz-card">
-                <span class="bookmark-icon" onclick="toggleBookmark"</span>
+                <span class="bookmark-icon" onclick="toggleBookmark(this)">🔖</span>
                 <div class="question">Question?</div>
                 <div class="answer">What is the name of the lightning bolt-shaped scar on Harry Potter's forehead?</div>
                 <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
@@ -60,7 +60,7 @@
         </div>
 
         <div class="quiz-card">
-            <span class="bookmark-icon" onclick="toggleBookmark"</span>
+            <span class="bookmark-icon" onclick="toggleBookmark(this)">🔖</span>
             <div class="question">Question?</div>
             <div class="answer">Which magical creature guards the entrance to the Gryffindor common room??</div>
             <button class="show-answer-btn" onclick="toggleAnswer(this)">Show Answer</button>
@@ -76,7 +76,31 @@
 
         
 
-            
+
+        
+                <div class="stats">
+                    <div class="stat-box">
+                        <span>🎓</span>
+                        <span>12</span>
+                    </div>
+                    <div class="stat-box">
+                        <span>💬</span>
+                        <span>4</span>
+                    </div>
+                </div>
+
+                <div class="settings">
+                    <h3>Settings</h3>
+                    <div class="toggle-container">
+                        <span>Dark Mode</span>
+                        <div class="toggle" onclick="toggleDarkMode(this)">
+                            <div class="toggle-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
      <footer class="footer-nav">
             <nav class="nav-container">
@@ -105,3 +129,4 @@
 
     </body>
     </html>
+
